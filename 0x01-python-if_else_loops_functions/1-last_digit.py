@@ -5,7 +5,7 @@ last_str = ''
 if number < 0:
     last_digit = int(str(number)[-1]) * -1
 else:
-    last_digit = int(str(number))[-1]
+    last_digit = int(str(number)[-1])
 if last_digit > 5:
     last_str = 'and is greater than 5'
 elif last_digit == 0:
