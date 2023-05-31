@@ -1,23 +1,20 @@
 #!/usr/bin/python3
+def safe_print_division(a, b):
+    try:
+        div = int(a)/int(b)
+        return div
+    except Exception:
+        return None
+    finally:
+        print("Inside result: {}".format(div))
 
 
-def safe_print_list(my_list=[], x=0):
-    total = 0
-    for i in range(x):
-        try:
-            print("{}".format(my_list[i]), end="")
-            total += 1
-        except:
-            break
-    print("")
-    return (total)
+a = 12
+b = 2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
 
-
-my_list = [1, 2, 3, 4, 5]
-
-nb_print = safe_print_list(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list))
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list) + 2)
-print("nb_print: {:d}".format(nb_print))
+a = 12
+b = 0
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))

@@ -2,8 +2,8 @@
 def safe_print_division(a, b):
     try:
         result = int(a)/int(b)
-        print("Inside result: {}".format(result))
+        return result
     except Exception:
         return None
     finally:
-        print("{}".format(result))
+        print("Inside result: {}".format(result))
